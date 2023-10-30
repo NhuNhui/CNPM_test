@@ -1,6 +1,6 @@
 import React from "react";
 
-//import { BsFillTrashFill, BsFillPencilFill } from "react-icons/bs";
+import { BsFillTrashFill, BsFillPencilFill } from "react-icons/bs";
 
 import "./table.css";
 
@@ -15,6 +15,7 @@ export const Table = ({ rows, deleteRow, editRow }) => {
             <th>Tên máy in</th>
             <th>Vị trí máy in</th>
             <th>Trạng thái Máy in</th>
+            <th>Hoạt động</th>
           
         </thead>
         <tbody>
@@ -45,6 +46,19 @@ export const Table = ({ rows, deleteRow, editRow }) => {
                   <span className={`label label-${row.status}`}>
                     {statusText}
                   </span>
+                </td>
+                <td className="button">
+                  <span className="actions">
+                    <BsFillTrashFill
+                      className="delete-btn"
+                      onClick={() => deleteRow(idx)}
+                    />
+                    <BsFillPencilFill
+                      className="edit-btn"
+                      onClick={() => editRow(idx)}
+                    />
+                  </span>
+                  
                 </td>
               </tr>
             );

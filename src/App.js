@@ -3,6 +3,8 @@ import { useState } from "react";
 import "./App.css";
 import { Table } from "./table"
 import { Modal } from "./Modal";
+import { SearchBar } from "./Search/SearchBar";
+import { SearchResultsList } from "./Search/SearchResultsList";
 
 function App() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -48,10 +50,18 @@ function App() {
             return newRow;
           })
         );
+
   };
+  const [results, setResults] = useState([]);
 
   return (
+    
+
     <div className="App">
+      <div className="search-bar-container">
+        <SearchBar setResults={setResults} />
+        {results && results.length > 0 && <SearchResultsList results={results} />}
+      </div>
       <button onClick={() => setModalOpen(true)} className="btn">
         Thêm máy in
       </button>
