@@ -10,7 +10,9 @@ export const Table = ({ rows, deleteRow, editRow }) => {
       <table className="table">
         <thead>
           
-            <th>All</th>
+            <th className="button">
+              <input type="checkbox" All/>
+            </th>
             <th>ID máy in</th>
             <th>Tên máy in</th>
             <th>Vị trí máy in</th>

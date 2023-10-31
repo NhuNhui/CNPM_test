@@ -8,7 +8,7 @@ export const Modal = ({ closeModal, onSubmit, defaultValue }) => {
       id: "",
       name: "",
       place: "",
-      status: ""
+      status: "on"
     }
   );
   const [errors, setErrors] = useState("");
@@ -21,7 +21,12 @@ export const Modal = ({ closeModal, onSubmit, defaultValue }) => {
       let errorFields = [];
       for (const [key, value] of Object.entries(formState)) {
         if (!value) {
-          errorFields.push(key);
+          if(key === "id")
+            errorFields.push("ID máy in");
+          if(key === "name") 
+            errorFields.push("Tên máy in");
+          if(key === "place") 
+            errorFields.push("Vị trí máy in");
         }
       }
       setErrors(errorFields.join(", "));
@@ -81,9 +86,12 @@ export const Modal = ({ closeModal, onSubmit, defaultValue }) => {
           </div>
           
 
-          {errors && <div className="error">{`Please include: ${errors}`}</div>}
+          {errors && 
+          <div className="error">{`Thêm máy in thất bài do thiếu: ${errors}`}</div>
+          }
           
         </form>
+        
       </div>
     </div>
   );

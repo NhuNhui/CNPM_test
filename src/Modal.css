@@ -43,9 +43,19 @@
   }
   
   .error {
-    background-color: #f8d7da;
-    color: #df4759;
+    background-color: #ed2d3d;
+    color: #f7f2f3;
     padding: 0.5rem;
     border-radius: 0.3rem;
     margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .success {
+    background-color: #1bdd79;
+    color: #eae7e7;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    margin-bottom: 1rem;
+    text-align: center;
   }

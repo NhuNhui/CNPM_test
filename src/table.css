@@ -3,15 +3,16 @@
 }
 
 .table {
+  
   display: block;
   overflow: hidden;
   table-layout: fixed;
   border-collapse: collapse;
-  box-shadow: 0px 10px 10px #ccc;
+  box-shadow: 0px 10px 10px #cccccc;
   border-radius: 10px;
   white-space: nowrap;
   width: 100em;
-  max-width: 50%;
+  max-width: 60%;
   margin: auto;
   table-layout: auto;
   overflow-x: auto;
@@ -20,8 +21,9 @@
 
 .table thead {
   text-align: center;
-  background-color: #ccc;
+  background-color: #a7bbee;
   color: #222;
+
 }
 
 .table th,
@@ -37,13 +39,21 @@
   text-overflow: ellipsis;
 }
 
-.table tbody tr:hover {
+.table tbody tr:nth-child(odd) {
   background-color: #eee;
+}
+
+.table tbody tr:nth-child((even)) {
+  background-color: #372e2e;
+}
+
+.table tbody tr:hover {
+  background-color: #c2dafa;
 }
 
 .expand {
   text-align: center;
-  width: 100%;
+  width: 50%;
 }
 
 .label {
@@ -75,3 +85,5 @@
 .delete-btn {
   color: #e10d05;
 }
+
+

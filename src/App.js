@@ -65,6 +65,7 @@ function App() {
       <button onClick={() => setModalOpen(true)} className="btn">
         Thêm máy in
       </button>
+      <div className="success">Thêm máy in thành công</div>
       <Table rows={rows} deleteRow={handleDeleteRow} editRow={handleEditRow} />
       
       {modalOpen && (
