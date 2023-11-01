@@ -54,9 +54,7 @@ export const Modal = ({ closeModal, onSubmit, defaultValue }) => {
     >
       <div className="modal">
         <form>
-          <button type="submit" className="btn" onClick={handleSubmit}>
-            Thêm máy in
-          </button>
+          
           <div className="form-group">
             <label htmlFor="id">ID Máy In</label>
             <input name="id" onChange={handleChange} value={formState.id} />
@@ -81,6 +79,9 @@ export const Modal = ({ closeModal, onSubmit, defaultValue }) => {
               <option value="off">Off</option>
             </select>
           </div>
+          <button type="submit" className="btn" onClick={handleSubmit}>
+            Đồng Ý
+          </button>
           
 
           {errors && 
