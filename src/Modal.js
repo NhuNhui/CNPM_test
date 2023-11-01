@@ -40,11 +40,8 @@ export const Modal = ({ closeModal, onSubmit, defaultValue }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     if (!validateForm()) return;
-
     onSubmit(formState);
-
     closeModal();
   };
 
@@ -87,7 +84,7 @@ export const Modal = ({ closeModal, onSubmit, defaultValue }) => {
           
 
           {errors && 
-          <div className="error">{`Thêm máy in thất bài do thiếu: ${errors}`}</div>
+            <div className="error">{`Thêm máy in thất bài do thiếu: ${errors}`}</div>
           }
           
         </form>

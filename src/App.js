@@ -5,6 +5,7 @@ import { Table } from "./table"
 import { Modal } from "./Modal";
 import { SearchBar } from "./Search/SearchBar";
 import { SearchResultsList } from "./Search/SearchResultsList";
+//import { Success } from "./Sucess";
 
 function App() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -55,17 +56,21 @@ function App() {
   const [results, setResults] = useState([]);
 
   return (
-    
-
     <div className="App">
       <div className="search-bar-container">
         <SearchBar setResults={setResults} />
         {results && results.length > 0 && <SearchResultsList results={results} />}
       </div>
-      <button onClick={() => setModalOpen(true)} className="btn">
+      <button onClick={() => {
+        setModalOpen(true);
+        <div className="success">
+          Thêm máy in thành công
+        </div>
+      }} 
+        className="btn">
         Thêm máy in
       </button>
-      <div className="success">Thêm máy in thành công</div>
+      
       <Table rows={rows} deleteRow={handleDeleteRow} editRow={handleEditRow} />
       
       {modalOpen && (

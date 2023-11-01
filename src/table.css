@@ -9,10 +9,9 @@
   table-layout: fixed;
   border-collapse: collapse;
   box-shadow: 0px 10px 10px #cccccc;
-  border-radius: 10px;
   white-space: nowrap;
   width: 100em;
-  max-width: 60%;
+  max-width: 50%;
   margin: auto;
   table-layout: auto;
   overflow-x: auto;
