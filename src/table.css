@@ -20,7 +20,7 @@
 
 .table thead {
   text-align: center;
-  background-color: #a7bbee;
+  background-color: white;
   color: #222;
 
 }
@@ -31,6 +31,13 @@
   padding: 0.8rem;
 }
 
+.table, th, td{
+  border:1px solid black;
+}
+
+.table{
+  border-collapse:collapse;
+}
 .table td {
   text-align: center;
   border-top: 0.5px solid #ddd;
@@ -43,7 +50,7 @@
 }
 
 .table tbody tr:nth-child((even)) {
-  background-color: #372e2e;
+  background-color: #382d2d;
 }
 
 .table tbody tr:hover {

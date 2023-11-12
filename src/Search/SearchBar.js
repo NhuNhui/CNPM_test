@@ -29,12 +29,13 @@ export const SearchBar = ({ setResults }) => {
 
   return (
     <div className="input-wrapper">
-      <FaSearch id="search-icon" />
+      
       <input
         placeholder="Tìm kiếm..."
         value={input}
         onChange={(e) => handleChange(e.target.value)}
       />
+      <FaSearch id="search-icon" />
     </div>
   );
 };

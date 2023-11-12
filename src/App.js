@@ -5,6 +5,9 @@ import { Table } from "./table"
 import { Modal } from "./Modal";
 import { SearchBar } from "./Search/SearchBar";
 import { SearchResultsList } from "./Search/SearchResultsList";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 //import { Success } from "./Sucess";
 
 function App() {
@@ -37,7 +40,6 @@ function App() {
 
   const handleEditRow = (idx) => {
     setRowToEdit(idx);
-
     setModalOpen(true);
   };
 
@@ -51,7 +53,10 @@ function App() {
             return newRow;
           })
         );
-
+    toast.success('Success Notification !', {
+      position: toast.POSITION.TOP_RIGHT
+    });
+    
   };
   const [results, setResults] = useState([]);
 
@@ -63,10 +68,7 @@ function App() {
       </div>
       <button onClick={() => {
         setModalOpen(true);
-        <div className="success">
-          Thêm máy in thành công
-        </div>
-      }} 
+        }} 
         className="btn">
         Thêm máy in
       </button>
@@ -81,6 +83,7 @@ function App() {
           }}
           onSubmit={handleSubmit}
           defaultValue={rowToEdit !== null && rows[rowToEdit]}
+          
         />
       )}
     </div>
